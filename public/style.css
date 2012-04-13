@@ -1,0 +1,125 @@
+@font-face {
+    font-family:JackInput;
+    src: url("/jackinput.ttf");
+}
+
+body {
+    background:#EFEFEF url('http://subtlepatterns.com/patterns/furley_bg.png');
+    font-family: "Helvetica Neue", Helvetica;
+    font-weight:300;
+    color: #292929;
+}
+
+div.top {
+    display:block;
+    width:600px;
+    margin:5px auto 10px auto;
+    padding:10px;
+    border-bottom:1px solid #CECECE;
+    font-size:24px;
+    line-height:1em;
+}
+
+a.title {
+    color: #292929;
+    text-decoration:none;
+}
+
+a.create {
+    display:block;
+    float:right;
+    text-decoration:none;
+    font-size:16px;
+    color: #292929;
+}
+
+a.create:hover {
+    color: #A6A6A6;
+}
+
+div.message, div.form {
+    font-family:JackInput;
+    background-color:#F6F6F6;
+    border:1px solid #CECECE;
+    width:600px;
+    padding:10px;
+    margin:10px auto 0px auto;
+    font-size:18px;
+}
+
+.message {
+    box-shadow: 0px 0px 20px #E1E1E1;
+}
+
+div.meta {
+    font-family: "Helvetica Neue", Helvetica;
+    font-size:12px;
+    color:#707070;
+    margin-bottom:5px;
+}
+
+div.screen {
+    position:fixed;
+    top:0px;
+    left:0px;
+    right:0px;
+    bottom:0px;
+    background-color:#383838;
+    opacity:.2;
+    z-index:1;
+    display:none;
+}
+
+div.form {
+    z-index:2;
+    position:fixed;
+    top:150px;
+    left:50%;
+    margin-left:-300px;
+    box-shadow: 0px 0px 10px #C1C1C1;
+    display:none;
+}
+
+input.name {
+    font-family: "Helvetica Neue", Helvetica;
+    font-size:12px;
+    font-weight:300;
+    background-color:#F6F6F6;
+    padding:3px;
+    border:0px;
+    border-bottom:1px dotted #AAAAAA;
+    outline:none;
+}
+
+textarea {
+    display:block;
+    font-family:JackInput;
+    font-size:18px;
+    background-color:#F6F6F6;
+    margin: 5px auto 5px auto;
+    width:580px;
+    padding:7px;
+    height:100px;
+    border:1px dashed #AAAAAA;
+    resize:none;
+    outline:none;
+}
+
+.button {
+    font-family: "Helvetica Neue", Helvetica;
+    font-size:14px;
+    font-weight:300;
+    background-color:#E9E9E9;
+    padding:5px 10px 5px 10px;
+    border:1px solid #AAAAAA;
+    box-shadow: 0px 0px 5px #ECECEC;
+    cursor:pointer;
+}
+
+.button:active {
+    background-color:#F6F6F6;
+}
+
+.messagetpl {
+    display:none;
+}

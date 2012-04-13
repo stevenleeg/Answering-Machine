@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>answering machine</title>
+        <link rel="stylesheet" type="text/css" href="/style.css">
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+        <script type="text/javascript" src="/script.js"></script>
+    </head>
+    <body>
+        <div class="screen" id="screen">&nbsp;</div>
+
+        <div class="form" id="form">
+            <div class="meta">
+                <input type="text" id="name" class="name" placeholder="Your name" /> left a message just now
+            </div>
+            <textarea id="content" placeholder="Your message"></textarea>
+            <input class="button" type="button" id="submit" value="Create message" />
+        </div>
+
+        <div class="top">
+            <a href="#" class="title">The Answering Machine</a>
+            <a href="#" class="create" id="create">Leave a message</a>
+        </div>
+        <% @posts.each do |post| %>
+            <div class="message">
+                <%= post.message %>
+            </div>
+        <% end %>
+
+        <div class="message">
+            <div class="meta"><span class="name">Steve Gattuso</span> left a message just now</div>
+            <span class="content">Hello there, world!</span>
+        </div>
+
+        <div class="messagetpl">
+            <div class="meta"><span class="name">Steve Gattuso</span> left a message just now</div>
+            <span class="content">Hello there, world!</span>
+        </div>
+    </body>
+</html>
