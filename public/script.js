@@ -8,10 +8,10 @@ function hideForm() {
 
 function submitForm() {
     hideForm();
-    //$.post("/submit", {
-        //"author": $("#name").val(),
-        //"content": $("#content").val()
-    //}, postSubmit, "json");
+    $.post("/submit", {
+        "author": $("#name").val(),
+        "content": $("#content").val()
+    }, postSubmit, "json");
     var msg = $(".messagetpl").clone();
     msg.children(".meta").children(".name").text($("#name").val());
     msg.children(".content").text($("#content").val());
@@ -19,6 +19,12 @@ function submitForm() {
     msg.insertBefore(".message");
     msg.hide();
     msg.fadeIn(250);
+}
+
+function postSubmit(data) {
+    if(data['status'] != 200) {
+        return alert("WHAT");
+    }
 }
 
 $(document).ready(function() {

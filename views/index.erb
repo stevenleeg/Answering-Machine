@@ -23,14 +23,10 @@
         </div>
         <% @posts.each do |post| %>
             <div class="message">
-                <%= post.message %>
+                <div class="meta"><%= post.author %> left a message on <%= post.date.strftime("%m/%d/%Y at %H:%M") %></div>
+                <%= post.content %>
             </div>
         <% end %>
-
-        <div class="message">
-            <div class="meta"><span class="name">Steve Gattuso</span> left a message just now</div>
-            <span class="content">Hello there, world!</span>
-        </div>
 
         <div class="messagetpl">
             <div class="meta"><span class="name">Steve Gattuso</span> left a message just now</div>

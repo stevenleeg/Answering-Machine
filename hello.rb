@@ -8,3 +8,16 @@ get '/' do
 
     erb :index
 end
+
+post '/submit' do
+    msg = Post.create(
+        :author => params[:author],
+        :content => params[:content],
+        :date => Time.now
+    )
+
+    {
+        :status => 200,
+        :error => nil
+    }.to_json
+end
