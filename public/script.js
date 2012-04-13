@@ -1,5 +1,6 @@
 function showForm() {
     $("#screen, #form").fadeIn(100);
+    $("#name, #content").val("");
 }
 
 function hideForm() {
@@ -7,6 +8,19 @@ function hideForm() {
 }
 
 function submitForm() {
+    // Do some vaildation
+    $("#name, #content").css("border-color", "#000");
+    var error = false;
+    if($("#name").val().length < 3) {
+        $("#name").css("border-color", "#FF0000");   
+        error = true;
+    }
+    if($("#content").val().length < 3) {
+        $("#content").css("border-color", "#FF0000");   
+        error = true
+    }
+    if(error == true) return;
+
     hideForm();
     $.post("/submit", {
         "author": $("#name").val(),
@@ -16,7 +30,7 @@ function submitForm() {
     msg.children(".meta").children(".name").text($("#name").val());
     msg.children(".content").text($("#content").val());
     msg.attr("class", "message");
-    msg.insertBefore(".message");
+    msg.insertAfter(".top");
     msg.hide();
     msg.fadeIn(250);
 }
